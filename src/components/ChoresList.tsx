@@ -1,4 +1,4 @@
-import { ChoresItem } from './ChoresItem';
+import { ChoresItem } from './ChoreItem';
 
 export function ChoresList() {
   return (

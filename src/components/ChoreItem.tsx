@@ -1,15 +1,17 @@
 import { Trash } from 'phosphor-react';
-import styles from './ChoresItem.module.css';
+import styles from './ChoreItem.module.css';
+import { Chore } from '../types/chore';
 
-export function ChoresItem() {
+interface ChoreItemProps {
+  chore: Chore;
+}
+
+export function ChoreItem({ chore }: ChoreItemProps) {
   return (
     <div className={styles.choresItem}>
       <label className={styles.labelItem}>
         <input type="checkbox" />
-        <span>
-          Integer urna interdum massa libero auctor neque turpis turpis semper.
-          Duis vel sed fames integer.
-        </span>
+        {chore.title}
         <button>
           <Trash size={22} />
         </button>
