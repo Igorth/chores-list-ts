@@ -1,6 +1,6 @@
 import styles from './App.module.css';
 import { AddChoresForm } from './components/AddChoresForm';
-import { ChoresItem } from './components/ChoresItem';
+import { ChoresList } from './components/ChoresList';
 import { Header } from './components/Header';
 
 export function App() {
@@ -8,9 +8,7 @@ export function App() {
     <div className={styles.wrapper}>
       <Header />
       <AddChoresForm />
-      <ChoresItem />
-      <ChoresItem />
-      <ChoresItem />
+      <ChoresList />
     </div>
   );
 }
