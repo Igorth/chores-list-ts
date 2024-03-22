@@ -1,9 +1,10 @@
 import styles from './App.module.css';
+import { Header } from './components/Header';
 
 export function App() {
   return (
     <div className={styles.wrapper}>
-      <h1>CHORES List</h1>
+      <Header />
     </div>
   );
 }
