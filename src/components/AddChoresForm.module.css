@@ -1,0 +1,33 @@
+.addChores {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: -1.5rem;
+}
+
+.addChores input {
+  width: 500px;
+  height: 0.5rem;
+  padding: 2rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--gray-500);
+  color: var(--gray-100);
+}
+
+.addChores button[type='submit'] {
+  padding: 1rem;
+  margin-left: 0.5rem;
+  background: var(--red-600);
+  color: var(--gray-100);
+  border: 0;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: background-color 0.1s;
+}
+
+.addChores button[type='submit']:hover {
+  background: var(--red-500);
+}
