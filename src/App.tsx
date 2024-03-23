@@ -16,10 +16,21 @@ export function App() {
     );
   }
 
+  function addChore(title: string) {
+    setChores((prevChores) => [
+      {
+        id: prevChores.length + 1,
+        title,
+        completed: false,
+      },
+      ...prevChores,
+    ]);
+  }
+
   return (
     <div className={styles.wrapper}>
       <Header />
-      <AddChoresForm />
+      <AddChoresForm onSubmit={addChore} />
       {chores.map((chore) => (
         <ChoreItem
           key={chore.id}
