@@ -27,6 +27,10 @@ export function App() {
     ]);
   }
 
+  function deleteChore(id: number) {
+    setChores((prevChores) => prevChores.filter((chore) => chore.id !== id));
+  }
+
   return (
     <div className={styles.wrapper}>
       <Header />
@@ -36,6 +40,7 @@ export function App() {
           key={chore.id}
           chore={chore}
           handleCompletedChange={setChoreCompleted}
+          handleDelete={deleteChore}
         />
       ))}
     </div>
