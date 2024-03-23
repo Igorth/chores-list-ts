@@ -14,6 +14,6 @@ export const dummyData: Chore[] = [
   {
     id: 3,
     title: 'Do the breakfast',
-    completed: false,
+    completed: true,
   },
 ];

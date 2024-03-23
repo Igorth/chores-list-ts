@@ -1,11 +1,11 @@
-import { ChoresItem } from './ChoreItem';
+import { ChoreItem } from './ChoreItem';
 
 export function ChoresList() {
   return (
     <div>
-      <ChoresItem />
-      <ChoresItem />
-      <ChoresItem />
+      <ChoreItem />
+      <ChoreItem />
+      <ChoreItem />
     </div>
   );
 }

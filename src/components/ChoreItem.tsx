@@ -4,14 +4,21 @@ import { Chore } from '../types/chore';
 
 interface ChoreItemProps {
   chore: Chore;
+  handleCompletedChange: (id: number, completed: boolean) => void;
 }
 
-export function ChoreItem({ chore }: ChoreItemProps) {
+export function ChoreItem({ chore, handleCompletedChange }: ChoreItemProps) {
   return (
     <div className={styles.choresItem}>
       <label className={styles.labelItem}>
-        <input type="checkbox" />
-        {chore.title}
+        <input
+          type="checkbox"
+          onChange={(e) => handleCompletedChange(chore.id, e.target.checked)}
+          checked={chore.completed}
+        />
+        <span className={chore.completed ? styles.completedChore : ''}>
+          {chore.title}
+        </span>
         <button>
           <Trash size={22} />
         </button>
