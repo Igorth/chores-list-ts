@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import styles from './App.module.css';
 import { AddChoresForm } from './components/AddChoresForm';
-import { ChoreItem } from './components/ChoreItem';
 import { Header } from './components/Header';
 import { dummyData } from './data/chores';
+import { ChoresList } from './components/ChoresList';
 
 export function App() {
   const [chores, setChores] = useState(dummyData);
@@ -35,14 +35,11 @@ export function App() {
     <div className={styles.wrapper}>
       <Header />
       <AddChoresForm onSubmit={addChore} />
-      {chores.map((chore) => (
-        <ChoreItem
-          key={chore.id}
-          chore={chore}
-          handleCompletedChange={setChoreCompleted}
-          handleDelete={deleteChore}
-        />
-      ))}
+      <ChoresList
+        chores={chores}
+        handleCompletedChange={setChoreCompleted}
+        handleDelete={deleteChore}
+      />
     </div>
   );
 }
