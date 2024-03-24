@@ -4,6 +4,7 @@ import { AddChoresForm } from './components/AddChoresForm';
 import { Header } from './components/Header';
 import { dummyData } from './data/chores';
 import { ChoresList } from './components/ChoresList';
+import { ChoresSummary } from './components/ChoresSummary';
 
 export function App() {
   const [chores, setChores] = useState(dummyData);
@@ -19,7 +20,7 @@ export function App() {
   function addChore(title: string) {
     setChores((prevChores) => [
       {
-        id: prevChores.length + 1,
+        id: Date.now(),
         title,
         completed: false,
       },
@@ -35,6 +36,7 @@ export function App() {
     <div className={styles.wrapper}>
       <Header />
       <AddChoresForm onSubmit={addChore} />
+      <ChoresSummary chores={chores} />
       <ChoresList
         chores={chores}
         handleCompletedChange={setChoreCompleted}

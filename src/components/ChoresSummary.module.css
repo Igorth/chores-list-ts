@@ -1,0 +1,17 @@
+.choresSummary {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gray-500);
+  margin: 1rem;
+}
+
+.createdChores {
+  color: var(--red-600);
+  font-weight: bold;
+}
+
+.completedChores {
+  color: var(--orange-600);
+  font-weight: bold;
+}
