@@ -10,10 +10,10 @@ export function ChoresSummary({ chores }: ChoresSummaryProps) {
   return (
     <div className={styles.choresSummary}>
       <span className={styles.createdChores}>
-        Tarefas criadas {chores.length}
+        Chores Created {chores.length}
       </span>
       <span className={styles.completedChores}>
-        Concluidas {completedChores.length} de {chores.length}
+        Completed {completedChores.length} out of {chores.length}
       </span>
     </div>
   );

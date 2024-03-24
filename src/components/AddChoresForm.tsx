@@ -24,7 +24,7 @@ export function AddChoresForm({ onSubmit }: AddChoresFormProps) {
       <input
         onChange={(e) => setInput(e.target.value)}
         value={input}
-        placeholder="Adicione uma nova tarefa"
+        placeholder="Add a new chores"
       />
       <button type="submit">Add</button>
     </form>

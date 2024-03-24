@@ -37,9 +37,9 @@ export function ChoresList({
         <div className={styles.choreList}>
           <ClipboardText size={50} />
           <p className={styles.choreParagraphOne}>
-            Você ainda não tem tarefas cadastradas
+            You don't have chores created yet.
           </p>
-          <p>Crie tarefas e organize seus itens a fazer</p>
+          <p>Create chores and organize your chores list.</p>
         </div>
       )}
     </>
