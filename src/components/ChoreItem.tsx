@@ -21,7 +21,9 @@ export function ChoreItem({
           onChange={(e) => handleCompletedChange(chore.id, e.target.checked)}
           checked={chore.completed}
         />
-        <span className={chore.completed ? styles.completedChore : ''}>
+        <span
+          className={chore.completed ? styles.completedChore : styles.completed}
+        >
           {chore.title}
         </span>
         <button onClick={() => handleDelete(chore.id)}>

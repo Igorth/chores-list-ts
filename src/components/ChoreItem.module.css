@@ -11,7 +11,7 @@
 
 .labelItem {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 1rem;
   background: var(--gray-500);
   padding: 1rem;
@@ -35,4 +35,16 @@
 
 .completedChore {
   text-decoration: line-through;
+  width: 100%;
+}
+
+.completed {
+  width: 100%;
+}
+
+input[type='checkbox'] {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Chrome, Safari, Opera */
+  transform: scale(1.2);
+  accent-color: var(--orange-600);
 }

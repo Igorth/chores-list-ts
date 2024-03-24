@@ -3,7 +3,8 @@
   justify-content: space-between;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--gray-500);
-  margin: 1rem;
+  max-width: 70rem;
+  margin: 2rem auto;
 }
 
 .createdChores {
