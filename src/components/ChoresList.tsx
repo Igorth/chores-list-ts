@@ -1,5 +1,7 @@
+import { ClipboardText } from 'phosphor-react';
 import { Chore } from '../types/chore';
 import { ChoreItem } from './ChoreItem';
+import styles from './ChoresList.module.css';
 
 interface ChoresListProps {
   chores: Chore[];
@@ -20,15 +22,26 @@ export function ChoresList({
   });
 
   return (
-    <div>
-      {choresSorted.map((chore) => (
-        <ChoreItem
-          key={chore.id}
-          chore={chore}
-          handleCompletedChange={handleCompletedChange}
-          handleDelete={handleDelete}
-        />
-      ))}
-    </div>
+    <>
+      <div>
+        {choresSorted.map((chore) => (
+          <ChoreItem
+            key={chore.id}
+            chore={chore}
+            handleCompletedChange={handleCompletedChange}
+            handleDelete={handleDelete}
+          />
+        ))}
+      </div>
+      {chores.length === 0 && (
+        <div className={styles.choreList}>
+          <ClipboardText size={50} />
+          <p className={styles.choreParagraphOne}>
+            Você ainda não tem tarefas cadastradas
+          </p>
+          <p>Crie tarefas e organize seus itens a fazer</p>
+        </div>
+      )}
+    </>
   );
 }

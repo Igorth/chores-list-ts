@@ -1,0 +1,11 @@
+.choreList {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  color: var(--gray-300);
+  line-height: 1.6;
+}
+
+.choreParagraphOne {
+  font-weight: bold;
+}
